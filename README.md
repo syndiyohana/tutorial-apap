@@ -18,7 +18,6 @@ menggunakan maven pada local environment saya.
 ### Github
 
 1. Apa itu Issue Tracker? Apa saja masalah yang dapat diselesaikan dengan Issue Tracker?
-   (Tuliskan jawabanmu)
    Issue tracker adalah suatu tab pada github yang dapat digunakan untuk mencatat atau membuat
    issue baru ketika terjadi suatu masalah sehingga permintaan perubahan ataupun masalah tersebut
    dapat ditrack dengan mudah.
