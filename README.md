@@ -2,4 +2,4 @@
 
 ## Authors
 
-- **<Syndi Yohana Sitorus>** - _<1906353656>_ - _<C>_
+- **Syndi Yohana Sitorus** - _1906353656_ - _C_
