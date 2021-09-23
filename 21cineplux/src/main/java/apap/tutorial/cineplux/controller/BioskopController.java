@@ -59,6 +59,11 @@ public class BioskopController {
     ) {
         //Mendapatkan bioskop sesuai dengan idBioskop
         BioskopModel bioskop = bioskopService.getBioskopByNoBioskop(noBioskop);
+        model.addAttribute("noBioskop", noBioskop);
+        if (bioskop == null){
+            return "error-page-id";
+        }
+
         List<PenjagaModel> listPenjaga = bioskop.getListPenjaga();
 
         model.addAttribute("bioskop", bioskop);
@@ -73,6 +78,11 @@ public class BioskopController {
             Model model
     ){
         BioskopModel bioskop = bioskopService.getBioskopByNoBioskop(noBioskop);
+        model.addAttribute("noBioskop", noBioskop);
+        if (bioskop == null){
+            return "error-page-id";
+        }
+
         model.addAttribute("bioskop", bioskop);
         return "form-update-bioskop";
     }
@@ -97,6 +107,7 @@ public class BioskopController {
         model.addAttribute("bioskop", bioskop);
         model.addAttribute("waktuTutup", bioskop.getWaktuTutup());
         model.addAttribute("noBioskop", bioskop.getNoBioskop());
+
         if (bioskop.getListPenjaga().isEmpty()){
             if (LocalTime.now().isAfter(bioskop.getWaktuTutup()) || LocalTime.now().isBefore(bioskop.getWaktuBuka())){
                 bioskopService.deleteBioskop(bioskop);
