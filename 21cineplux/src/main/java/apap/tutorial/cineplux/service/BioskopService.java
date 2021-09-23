@@ -6,16 +6,16 @@ public interface BioskopService {
     //Method untuk menambah Bioskop
     void addBioskop(BioskopModel bioskop);
 
+    //Method untuk mengupdate Bioskop
+    void updateBioskop(BioskopModel bioskop);
+
     //Method untuk mendapatkan daftar bioskop yang telah tersimpan
     List<BioskopModel> getBioskopList();
 
-    //method untuk mendapatkan data sebuah bioskop berdasarkan id bioskop
-    BioskopModel getBioskopByIdBioskop(String idBioskop);
+    //method untuk mendapatkan data sebuah bioskop berdasarkan no bioskop
+    BioskopModel getBioskopByNoBioskop(Long noBioskop);
 
-    //method untuk mengupdate data jumlah studio berdasarkan id bioskop
-    void setJumlahStudioByIdBioskop(String idBioskop, int jumlahStudio);
-
-    //method untuk men-delete data bioskop berdasarkan id bioskop
+    //Method untuk hapus Bioskop
     void deleteBioskop(BioskopModel bioskop);
 
 }
