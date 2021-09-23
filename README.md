@@ -32,7 +32,7 @@ Pada anotasi @JoinColumn, name merujuk pada nama kolom pada table PenjagaModel. 
 
 ### Pertanyaan 5: Jelaskan kegunaan FetchType.LAZY, CascadeType.ALL, dan FetchType.EAGER
 
-FetchType.LAZY merujuk pada pemanggilan data yang sifatnya dilakukan sesuai dengan permintaan. Jadi permintaan harus dilakukan terlebih dahulu, lalu data akan dipanggil. Misalnya ketika ingin mendapatkan data dari method A pada suatu tabel, maka method A harus dipanggil terlebih dahulu. FetchType.EAGER berbanding terbalik dengan FetchType.LAZY. FetchType.EAGER merujuk pada pemanggilan data secara bersamaan tanpa dilakukannya permintaan terlebih dahulu. Misalnya ketika memnaggil method A, maka data dari method B yang terhubung dengan method A akan ikut terpanggil juga. CascadeType.All berguna untuk menerapkan semua hibernate CascadeTypes, termasuk seluruh operasi pada Entity Manager, seperti remove, refresh, merge, dll.
+FetchType.LAZY merujuk pada pemanggilan data yang sifatnya dilakukan sesuai dengan permintaan. Jadi permintaan harus dilakukan terlebih dahulu, lalu data akan dipanggil. Misalnya ketika ingin mendapatkan data dari method A pada suatu tabel, maka method A harus dipanggil terlebih dahulu. FetchType.EAGER berbanding terbalik dengan FetchType.LAZY. FetchType.EAGER merujuk pada pemanggilan data secara bersamaan tanpa dilakukannya permintaan terlebih dahulu. Misalnya ketika memanggil method A, maka data dari method B yang terhubung dengan method A akan ikut terpanggil juga. CascadeType.All berguna untuk menerapkan semua hibernate CascadeTypes, termasuk seluruh operasi pada Entity Manager, seperti remove, refresh, merge, dll.
 
 ### What I did not understand
 
