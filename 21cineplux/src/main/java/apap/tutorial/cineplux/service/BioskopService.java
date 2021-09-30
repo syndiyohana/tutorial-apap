@@ -1,5 +1,6 @@
 package apap.tutorial.cineplux.service;
 import apap.tutorial.cineplux.model.BioskopModel;
+import apap.tutorial.cineplux.model.FilmModel;
 import java.util.List;
 
 public interface BioskopService {
@@ -17,5 +18,8 @@ public interface BioskopService {
 
     //Method untuk hapus Bioskop
     void deleteBioskop(BioskopModel bioskop);
+
+    //Method untuk mendapatkan daftar film yang telah tersimpan
+    List<FilmModel> getFilmList();
 
 }

@@ -17,17 +17,21 @@ import java.util.List;
 @Getter
 @Entity
 @Table(name = "film")
-
-public class FilmModel implements Serializable{
+public class FilmModel implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long noFilm;
 
     @NotNull
-    @Size(max=30)
+    @Size(max = 30)
     @Column(nullable = false)
     private String namaFilm;
+
+    @NotNull
+    @Size(max = 50)
+    @Column(nullable = false)
+    private String deskripsiFilm;
 
     @NotNull
     @Column(nullable = false)
@@ -36,4 +40,5 @@ public class FilmModel implements Serializable{
     //Relasi dengan BioskopModel
     @ManyToMany(mappedBy = "listFilm")
     List<BioskopModel> listBioskop;
+
 }

@@ -2,7 +2,9 @@ package apap.tutorial.cineplux.controller;
 
 import apap.tutorial.cineplux.model.BioskopModel;
 import apap.tutorial.cineplux.model.PenjagaModel;
+import apap.tutorial.cineplux.model.FilmModel;
 import apap.tutorial.cineplux.service.BioskopService;
+import apap.tutorial.cineplux.service.FilmService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -18,6 +20,9 @@ public class BioskopController {
     @Qualifier("bioskopServiceImpl")
     @Autowired
     private BioskopService bioskopService;
+    @Qualifier("filmServiceImpl")
+    @Autowired
+    private FilmService filmService;
 
     //routing URL yang diinginkan
     @GetMapping("/bioskop/add")
@@ -25,6 +30,9 @@ public class BioskopController {
 
         //Add variabel id bioskop ke "idBioskop" untuk dirender ke dalam thymeleaf
         model.addAttribute("idBioskop", new BioskopModel());
+
+        List<FilmModel> listFilm = filmService.getListFilm();
+        model.addAttribute("listFilm", listFilm);
 
         //return view template yang digunakan
         return "form-add-bioskop";
@@ -65,9 +73,11 @@ public class BioskopController {
         }
 
         List<PenjagaModel> listPenjaga = bioskop.getListPenjaga();
+        List<FilmModel> listFilm = bioskop.getListFilm();
 
         model.addAttribute("bioskop", bioskop);
         model.addAttribute("listPenjaga", listPenjaga);
+        model.addAttribute("listFilm", listFilm);
 
         return "view-bioskop";
     }
