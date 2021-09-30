@@ -6,6 +6,41 @@
 
 ---
 
+## Tutorial 4
+
+### What I have learned today
+
+Yang saya pelajari hari ini adalah mengenai penggunaan Thymeleaf. Pada tutorial minggu ini berfokus pada role view dalam thymeleaf untuk membuat template yang elegant dan rapi. Selain itu, saya juga mempelajari mengenai konsep view pada Spring Boot.
+
+#### Pertanyaan 1: Jelaskan perbedaan th:include dan th:replace!
+
+th:replace berfungsi untuk menggantikan tag host dengan fragment yang sudah dibuat sebelumnya. Dengan begitu, tag host pada html akan dihapus dan sebagai gantinya akan menambah fragmen yang sudah kita tentukan, termasuk tag fragmen itu sendiri. Sedangkan th:include berguna untuk menyisipkan fragmen ke dalam body tag host-nya, namun tidak ikut memasukkan tag fragmentnya.
+
+#### Pertanyaan 2: Jelaskan apa fungsi dari th:object!
+
+th:object merupakan suatu tag pada thymeleaf yang berfungsi untuk menampung objek yang berasal dari controller. Mmaksudnya, ketika kita sudah mendefinisikan object pada controller yang akan merujuk ke suatu halaman html, maka pada halaman html tersebut dapat dibuat tag th:object untuk menyimpan semua data pada form html ke dalam objek tersebut sehingga nantinya dapat ditampilkan melalui objek tersebut.
+
+#### Pertanyaan 3: Jelaskan perbedaan dari \* dan $ pada saat penggunaan th:object! Kapan harus dipakai?
+
+Pada saat tidak ada penggunaan th:object, maka \* dan $ melakukan fungsi atau hal yang sama dengan cara memanggil suatu variabel. Namun, ketika terdapat th:object, maka syntax mengevaluasi ekspresi pada object yang dipilih dibanding dengan memangil keseluruhan konteksnya. Misalnya, ketika ada th:object="${film}", maka kita dapat menggunakan syntax \* untuk memanggil variabel nama film dengan cara \*{nama}. Namun, ketika tidak ada th:object, maka penggunaan syntax \* akan sama dengan syntax $, seperti \*{film.nama} dan ${film.nama}.
+
+#### What I did not understand
+
+Selama pengerjaan tutorial, saya masih terhambat dalam mengerjakan latihannya. Saya tidak dapat menghandle form dengan thymeleaf untuk menambah dan menghapus row field. Hal tersebut karena saya tidak dapat mengaitkan penggunaan thymeleaf serta menghubungkannya dengan controller.
+
+- [x] Proses Maven
+- [x] Dependency Injection
+- [x] Proses Autowired
+- [x] Penggunaan anotasi-anotasi
+- [ ] Penggunaan thymeleaf dan controller untuk handling form
+
+#### Source
+
+- https://stackoverflow.com/questions/37103958/difference-between-thymeleaf-include-and-replace
+- https://www.sinaungoding.com/yuk-belajar-web-menggunakan-spring-boot2/
+- https://stackoverflow.com/questions/28559817/displaying-active-navigation-based-on-contextual-data
+- https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html
+
 ## Tutorial 3
 
 ### What I have learned today
