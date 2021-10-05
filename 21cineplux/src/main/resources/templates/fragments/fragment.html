@@ -42,6 +42,13 @@
 
         </div>
     </nav>
+
+    <div class="footer" th:fragment="footer">
+        <h3 style="text-align:center;">
+            Made by Syndi Yohana
+        </h3>
+        <p th:text="${#dates.format(#dates.createNow(), 'dd MMM yyyy')}" style="text-align:center;"></p>
+    </div>
 </body>
 
 </html>
