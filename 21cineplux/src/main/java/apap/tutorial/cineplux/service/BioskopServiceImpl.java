@@ -1,7 +1,9 @@
 package apap.tutorial.cineplux.service;
 
 import apap.tutorial.cineplux.model.BioskopModel;
+import apap.tutorial.cineplux.model.FilmModel;
 import apap.tutorial.cineplux.repository.BioskopDB;
+import apap.tutorial.cineplux.repository.FilmDB;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Sort;
@@ -16,6 +18,8 @@ public class BioskopServiceImpl implements BioskopService{
 
     @Autowired
     BioskopDB bioskopDB;
+    @Autowired
+    FilmDB filmDB;
 
     @Override
     public void addBioskop(BioskopModel bioskop){
@@ -44,5 +48,10 @@ public class BioskopServiceImpl implements BioskopService{
     @Override
     public void deleteBioskop(BioskopModel bioskop){
         bioskopDB.delete(bioskop);
+    }
+
+    @Override
+    public List<FilmModel> getFilmList() {
+        return filmDB.findAll();
     }
 }

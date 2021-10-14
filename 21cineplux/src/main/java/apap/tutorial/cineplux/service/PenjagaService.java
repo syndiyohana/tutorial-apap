@@ -15,4 +15,6 @@ public interface PenjagaService {
 
     //Method untuk hapus penjaga
     void deletePenjaga(PenjagaModel penjaga);
+
+    int deletePenjagaa(PenjagaModel penjaga);
 }
