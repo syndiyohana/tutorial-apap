@@ -82,7 +82,7 @@
                                         <td th:text="${film.namaFilm}"></td>
                                         <td th:text="${film.deskripsiFilm}"></td>
                                         <td th:if="${film.isDisplaying} == true">IYA</td>
-                                        <td th:if="${penjaga.isDisplaying} == false">TIDAK</td>
+                                        <td th:if="${film.isDisplaying} == false">TIDAK</td>
                                     </tr>
                                 </tbody>
                             </table>

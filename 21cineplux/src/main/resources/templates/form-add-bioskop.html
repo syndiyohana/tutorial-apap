@@ -30,21 +30,34 @@
                         <input required class="form-control" type="time" name="waktuTutup" />
                         <br><br>
                         <br><br>
-                        <div>
-                            <label>Film</label> <br>
-                            <select id="namaFilm" class="form-control">
-                                <option value="" type="hidden" >Select a film</option>
-                                <option th:each="film : ${listFilm}"
-                                        th:value="${film.namaFilm}"
-                                        th:text="${film.namaFilm}">
-                                </option>
-                            </select>
-                        </div>
+                        <table class="table">
+                            <thead>
+                                <th>Nama Film</th>
+                                <th>
+                                    <button class="btn btn-primary" type="submit" name="addRow">Tambah Row</button>
+                                </th>
+                            </thead>
+                            <tbody>
+                                <tr th:each="film, iterationStatus : *{listFilm}">
+                                    <td>
+                                        <select name="noFilm" th:field="*{listFilm[__${iterationStatus.index}__].noFilm}" class="form-control">
+                                            <div th:each="filmEx, iterationStatus2 : ${listFilm}">
+                                                <option th:value="${filmEx.noFilm}" th:text="${filmEx.namaFilm}">
+                                                </option>
+                                            </div>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <button th:value="${iterationStatus.index}" class="btn btn-danger" type="submit" name="deleteRow">Hapus</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
 
 
                         <br>
                         <br>
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button class="btn btn-primary" type="submit" name="save">Submit</button>
                         <a class="btn btn-primary" href="/">Home</a>
                     </form>
                 </div>
