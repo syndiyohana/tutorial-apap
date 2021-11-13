@@ -19,4 +19,6 @@ public interface BioskopRestService {
     Mono<String> getStatus(Long noBioskop);
 
     Mono<BioskopDetail> postStatus();
+
+    List<BioskopModel> getBioskopByJumlahStudio(Integer jumlahStudio);
 }

@@ -79,5 +79,10 @@ public class BioskopRestController {
     private Mono<BioskopDetail> postStatus(){
         return bioskopRestService.postStatus();
     }
+
+    @GetMapping(value="/list-bioskop/{jumlahStudio}")
+    private List<BioskopModel> retrieveListBioskop(@PathVariable("jumlahStudio") Integer jumlahStudio) {
+        return bioskopRestService.retrieveListBioskop();
+    }
 }
 
