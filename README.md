@@ -6,6 +6,54 @@
 
 ---
 
+## Tutorial 5
+
+### What I have learned today
+
+Pada tutorial ini, saya mempelajari mengenai Web Service dalam mengakses data-data yang sebelumnya sudah digunakan pada tutorial 4. Pembahasan meliputi pengertian webservice, portman, dan mock service beserta fungsinya, bagaimana mengakses webservice dengan berbagai method, bagaimana menggunakan webservice menggunakan library WebClient, serta bagaimana membuat dan menggunakan mock server.
+
+#### Pertanyaan 1: Apa itu Postman? Apa kegunaannya?
+
+Postman merupakan suatu aplikasi atau tool yang umumnya digunakan oleh para developer dalam melakukan proses development API. Postman berfungsi sebagai REST Client untuk digunakan dalam uji coba REST API. Kegunaan Postman antara lain dapat memudahkan pengelompokan request dengan adanya collection, dapat menyimpan attribute agar dapat digunakan atau dimanipulasi dalam environment, sebagai pembuatan mockup API, dapat menjalankan request secara otomatis, dan lain-lain.
+
+#### Pertanyaan 2: Jelaskan fungsi dari anotasi @JsonIgnoreProperties dan @JsonProperty
+
+Anotasi @JsonIgnoreProperties digunakan untuk mengabaikan logical properties pada serialisasi dan deserialisasi JSON. @JsonIgnoreProperties dianotasikan pada kelas saja sehingga kita perlu menspesifikasi logical property yang ingin diabaikan pada kelas tersebut. Sedangkan @JsonProperty mendefinisikan logical property yang akan digunakan dalam serialisasi dan deserialisasi JSON. @JsonProperty dapat mengubah visibilitas dari logical property selama serialisasi dan deserialisasi.
+
+#### Pertanyaan 3: Apa kegunaan atribut WebClient?
+
+Atribut WebClient berfungsi sebagai wdah dalam menyediakan metode umum untuk mengirim dan menerima data dari lokal, internet, ataupun intranet yang diidentifikasi dalam bentuk URI. Instance dari WebClient dapat mengakses data dengan turunan WebRequest yang terdaftar pada metode WebRequest.RegisterPrefix.
+
+#### Pertanyaan 4: Apa kegunaan atribut WebClient?
+
+Atribut WebClient berfungsi sebagai wdah dalam menyediakan metode umum untuk mengirim dan menerima data dari lokal, internet, ataupun intranet yang diidentifikasi dalam bentuk URI. Instance dari WebClient dapat mengakses data dengan turunan WebRequest yang terdaftar pada metode WebRequest.RegisterPrefix.
+
+#### Pertanyaan 5: Apa itu ResponseEntity dan BindingResult? Apa kegunaannya?
+
+ResponseEntity mewakili seluruh respons HTTP, baik kode status, header, maupun isinya. Pengaturan isi, status, dan header dari respons HTTP menggunakan ResponseEntity. ResponseEntity bertipe generic sehingga kita dapat menggunakan tipe apapun sebagai response body nya. Sedangkan BindingResult adalah suatu object Spring yang menyimpan hasil validasi dan binding serta kesalahan-kesalahan yang mungkin terjadi. BindingResult haruslah muncul tepat setelah object model yang divalidasi agar Spring tidak gagal dalam memvalidasi object dan melempar exception.
+
+#### What I did not understand
+
+Selama pengerjaan tutorial, saya masih agak kebingungan dalam mengimplementasikan atribut WebClient ketika ingin mengambil data dalam bentuk URI.
+
+- [x] Proses Maven
+- [x] Dependency Injection
+- [x] Proses Autowired
+- [x] Penggunaan anotasi-anotasi
+- [x] Penggunaan thymeleaf dan controller untuk handling form
+- [ ] Implementasi atribut WebClient
+
+#### Source
+
+- https://medium.com/@novancimol12/postman-4f181d625fe1
+- https://antares.id/id/postman.html#:~:text=Terima%20Data%20(Get)-,Pendahuluan,API%20yang%20telah%20mereka%20buat.
+- https://www.concretepage.com/jackson-api/jackson-jsonignore-jsonignoreproperties-and-jsonignoretype
+- https://www.concretepage.com/jackson-api/jackson-jsonproperty-and-jsonalias-example
+- https://docs.spring.io/spring-security/site/docs/5.1.1.RELEASE/reference/html/servlet-webclient.html
+- https://docs.microsoft.com/en-us/dotnet/api/system.net.webclient?view=net-5.0
+- https://www.baeldung.com/spring-response-entity
+- https://web.archive.org/web/20161120115428/http://codetutr.com/2013/05/28/spring-mvc-form-validation/
+
 ## Tutorial 4
 
 ### What I have learned today
