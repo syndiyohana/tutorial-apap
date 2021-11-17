@@ -3,10 +3,17 @@ package apap.tutorial.cineplux.controller;
 import apap.tutorial.cineplux.model.BioskopModel;
 import apap.tutorial.cineplux.model.PenjagaModel;
 import apap.tutorial.cineplux.model.FilmModel;
+import apap.tutorial.cineplux.model.UserModel;
 import apap.tutorial.cineplux.service.BioskopService;
 import apap.tutorial.cineplux.service.FilmService;
+import apap.tutorial.cineplux.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +30,8 @@ public class BioskopController {
     @Qualifier("filmServiceImpl")
     @Autowired
     private FilmService filmService;
+    @Autowired
+    private UserService userService;
 
     // routing URL yang diinginkan
     @GetMapping("/bioskop/add")
@@ -98,7 +107,14 @@ public class BioskopController {
     public String viewDetailBioskop(@RequestParam(value = "noBioskop") Long noBioskop, Model model) {
         // Mendapatkan bioskop sesuai dengan idBioskop
         BioskopModel bioskop = bioskopService.getBioskopByNoBioskop(noBioskop);
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        UserDetails userDetail = (UserDetails) auth.getPrincipal();
+        UserModel user = userService.getUserByUsername(userDetail.getUsername());
+
+        model.addAttribute("role", user.getRole().getRole());
         model.addAttribute("noBioskop", noBioskop);
+
         if (bioskop == null) {
             return "error-page-id";
         }
