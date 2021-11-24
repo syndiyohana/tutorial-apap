@@ -6,6 +6,49 @@
 
 ---
 
+## Tutorial 6
+
+### What I have learned today
+
+Pada tutorial ini, saya mempelajari mengenai Web Security, tetang bagaimana cara membuat fitur login dan logout serta autentikasinya.
+
+#### Pertanyaan 1: Jelaskan secara singkat perbedaan Otentikasi dan Otorisasi! Di bagian mana (dalam kode yang telah anda buat) konsep tersebut diimplementasi?
+
+Otentikasi adalah proses untuk mengidentifikasi pengguna melalui data-data yang sudah tersimpan di database, sedangkan otorisasi adalah suatu [roses untuk menentukan apakah pengguna/user saat ini diperbolehkan untuk mengakses atau melakukan tugas tertentu atau tidak. Proses otentikasi ketika memasukkan password untuk login, sedangkan otorisasi ketika hanya role Admin yang boleh mengubah data pengguna.]
+
+#### Pertanyaan 2: Apa itu BCryptPasswordEncoder? Jelaskan secara singkat cara kerja dan tujuannya.
+
+BCryptPasswordEncoder adalah fungsi hashing kata sandi sehingga data yang tersimpan di database tidak sesuai dengan data yang kita masukkan. Hal ini bertujuan agar kata sandi yang kita masukkan tidak mudah bocor/dihack. Cara kerjanya adalah, ketika kita mendaftarkan password pada suatu web, maka password tersebut akan otomatis akan diencoding sehingga password akan disimpan di dalam database dalam bentuk simbol/kata acak.
+
+#### Pertanyaan 3: Apakah penyimpanan password sebaiknya menggunakan encryption atau hashing? Mengapa demikian?
+
+Menurut saya, dalam penyimpanan password sebaiknya menggunakan encryption karena proses enkripsi yang dapat mengubah data yang disimpan menjadi data awal sehingga memudahkan pengguna. Sedangkan untuk validasi sebaiknya menggunakan hashing.
+
+#### Pertanyaan 4: Jelaskan secara singkat apa itu UUID beserta penggunaannya!
+
+UUID adalah kupulan 36 string atau karakter yang dibuat secara acak dan unik dengan suatu teknik khusus. Kegunaan UUID adalah agar dapat mengamankan data serta menghindari konflik primary key sehingga data dapat dengan aman tersimpan dalam database.
+
+#### Pertanyaan 5: Apa kegunaan class UserDetailsServiceImpl.java? Mengapa harus ada class tersebut?
+
+Kegunaan class UserDetailsServiceImpl.java adalah untuk mengimplementasikan interface UserDetailService yanga da pada core.UsserDetails sehingga dapat membuat object UserDetails dari masing-masing user. Dengan demikian, role tiap user akan tersimpan dan bisa diketahui
+
+#### What I did not understand
+
+Selama pengerjaan tutorial, saya masih agak kebingungan dalam menotentikasi suatu password.
+
+- [x] Proses Maven
+- [x] Dependency Injection
+- [x] Proses Autowired
+- [x] Penggunaan anotasi-anotasi
+- [x] Penggunaan thymeleaf dan controller untuk handling form
+- [x] Implementasi atribut WebClient
+
+#### Source
+
+- https://www.akakom.ac.id/site/news/124/autentikasi-dan-otorisasi-user-menggunakan-framework-yii
+- https://qastack.id/programming/4795385/how-do-you-use-bcrypt-for-hashing-passwords-in-php
+- https://www.eplusgo.com/menggunakan-uuid-di-php/
+
 ## Tutorial 5
 
 ### What I have learned today
@@ -24,11 +67,7 @@ Anotasi @JsonIgnoreProperties digunakan untuk mengabaikan logical properties pad
 
 Atribut WebClient berfungsi sebagai wdah dalam menyediakan metode umum untuk mengirim dan menerima data dari lokal, internet, ataupun intranet yang diidentifikasi dalam bentuk URI. Instance dari WebClient dapat mengakses data dengan turunan WebRequest yang terdaftar pada metode WebRequest.RegisterPrefix.
 
-#### Pertanyaan 4: Apa kegunaan atribut WebClient?
-
-Atribut WebClient berfungsi sebagai wdah dalam menyediakan metode umum untuk mengirim dan menerima data dari lokal, internet, ataupun intranet yang diidentifikasi dalam bentuk URI. Instance dari WebClient dapat mengakses data dengan turunan WebRequest yang terdaftar pada metode WebRequest.RegisterPrefix.
-
-#### Pertanyaan 5: Apa itu ResponseEntity dan BindingResult? Apa kegunaannya?
+#### Pertanyaan 4: Apa itu ResponseEntity dan BindingResult? Apa kegunaannya?
 
 ResponseEntity mewakili seluruh respons HTTP, baik kode status, header, maupun isinya. Pengaturan isi, status, dan header dari respons HTTP menggunakan ResponseEntity. ResponseEntity bertipe generic sehingga kita dapat menggunakan tipe apapun sebagai response body nya. Sedangkan BindingResult adalah suatu object Spring yang menyimpan hasil validasi dan binding serta kesalahan-kesalahan yang mungkin terjadi. BindingResult haruslah muncul tepat setelah object model yang divalidasi agar Spring tidak gagal dalam memvalidasi object dan melempar exception.
 
