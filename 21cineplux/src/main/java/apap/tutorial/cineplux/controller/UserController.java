@@ -90,12 +90,7 @@ public class UserController {
 
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         if (passwordEncoder.matches(existingPassword, dbPassword) && passwordKonfir.equals(passwordBaru)) {
-            if(existingPassword.equals(passwordBaru)){
-                return "error-change2";
-            }
-            else{
-                userService.ubahPassword(user,passwordEncoder.encode(passwordBaru));
-            }
+            userService.ubahPassword(user,passwordEncoder.encode(passwordBaru));
         } else {
             return "error-change";
         }
