@@ -6,6 +6,60 @@
 
 ---
 
+## Tutorial 7
+
+### What I have learned today
+
+Pada tutorial ini, saya mempelajari mengenai ReactJS yang fokus kepada frontend nya. Saya mempelajari penggunaan framework/library dari JavaScript. Selama lab, saya bellajar mengenail istilah, teknologi, arsitektur, dan design di ReactJS. Selain itu, saya juga mempelajari perbedaan class component dan functional component, serta perbedaan state dan props.
+
+#### Pertanyaan 1: Jelaskan apa yang Anda lakukan di latihan dalam satu paragraf per-soal. Berikan screenshot sebagai ilustrasi dari apa yang Anda jelaskan.
+
+Pada soal 1, untuk dapat meghapus item yang ada di cart, maka saya membuat fungsi baru seperti fungsi add to cart. Pada fungsi ini, saya mengecek jika index dari item yang ingin dihapus > 0, artinya bahwa item tersebut berada di cart, maka saya akan menghapus item tersebut dari cart dengan menggunakan method splice. Lalu mengupdate button dari add cart agar muncul dengan cara mengubah inCart menjadi false. Setelah itu, fungsi delete tersebut akaan dijalankan pada page title My Cart dengan memanggil fungsi tersebut pada onItemClick={this.handleDeleteItemFromCart}.
+![alt text](https://user-images.githubusercontent.com/71598534/143270279-fa0d4a48-4a95-47b4-bba0-579636276106.png)
+![alt text](https://user-images.githubusercontent.com/71598534/143271036-c77a38f8-73bb-4fdb-a6b8-47ee209c1cbc.png)
+
+Pada soal 2, untuk dapat menambah dan mengurangi jumlah balance, maka akan dipanggil setter setState untuk balance dengan menjumlahkan variabel balance yang sekarang dengan harga item (newItem.price) yang dihapus dari cart, serta mengurangkan variabel balance yang sekarang dengan harga item (newItem.price) yang ditambahkan ke cart.
+![alt text](https://user-images.githubusercontent.com/71598534/143270559-435d2de6-6a96-4ac7-a48d-4f8c650ed479.png)
+
+Pada soal 3, untuk menghandle balance yang kurang, saya membuat if condition untuk mengecek apakah balance yang sekarang cukup untuk menambah item ke cart. Caranya dengan mengecek jika jumlah balance yang sekarang kurang dari harga item yang akan ditambahkan, maka akan dipanggil alert bahwa balance tidak cukup. Selain itu, maka proses penambahan item ke cart akan dilakukan.
+![alt text](https://user-images.githubusercontent.com/71598534/143270636-858e93d2-89c7-453e-b6c8-8ac1bf737c26.png)
+
+#### Pertanyaan 2: Menurut pemahaman kamu selama pengerjaan tutorial ini, apa perbedaan antara state dan props?
+
+State merupakan tempat penyimpanan informasi kondisi yang mempengaruhi bagaimana kita dalam me-render suatu component (source of truth). State bersifat private dan hanya relevan terhadap komponen itu sendiri, sehingga state dapat menyimpan dan mengubah datanya sendiri dari dalam. Sedangkan props lebih menyerupai suatu parameter/atribut yang bersifat read-only, artinya tidak dapat berubah. Prop digunakan untuk berkomunikasi antar component, yang biasnaya untuk melempar data dari parent ke child.
+
+#### Pertanyaan 3: Menurut kamu, apakah sebaiknya kita menggunakan component (e.g. List, Item) dalam React? sebutkan alasannya
+
+Menurut saya, sebaiknya kita menggunakan component dalam react, hal ini karena dengan adanya component, maka UI pada suatu app React dapat terbagi menjadi bagian-bagian yang saling independen, sehingga akan memungkinkan kita untuk mereused dan mengelola setiap bagian secara terpisah. Hal ini tentunya akan memudahkan kita dalam pembuatan suatu aplikasi pada React.
+
+#### Pertanyaan 4: Apa perbedaan class component dan functional component?
+
+Functional component dapat dikatakan seperti Fungsi JavaScript yang biasanya, mengandung props sebagai argumen dan mereturn element react, sedangkan dalam menjalankan class component, kita pelru mengextend nay dari React. Pada functional component tidak terdapat method render yang harus digunakan, sedangkan pada class component harus memiliki method render yang mereturn HTML. Functional component biasa disebut juga sebagai stateless component karena secara sederhana hanya menerima data dan menampilkanny pada form tertentu, sedangkan class component biasa disebut sebagai stateful component karena mengimplementasikan logic dan state.
+
+#### Pertanyaan 5: Dalam react, apakah perbedaan component dan element?
+
+Pada React, element meruapakan apa yang direturn dari component, berupa suatu objek yang menggambarkan DOM nodes, sedangkan component merupakan sautu template yang dijadikan sebagai function atau class dalam react, yang nantinya akan mereturn suatu element. Komponen dapat menerima input berupa suatu argumen atau parameter dan akan menghasilkan output berupa return, sedangkan element hanya berupa suatu atribut yang tidak menerima input.
+
+#### What I did not understand
+
+Selama pengerjaan tutorial, saya masih agak bingung dengan hubungan antar component serta pembuatan function dan pemanggilan function pada views.
+
+- [x] Proses Maven
+- [x] Dependency Injection
+- [x] Proses Autowired
+- [x] Penggunaan anotasi-anotasi
+- [x] Penggunaan thymeleaf dan controller untuk handling form
+- [x] Implementasi atribut WebClient
+
+#### Source
+
+- https://scele.cs.ui.ac.id/pluginfile.php/128277/mod_resource/content/2/Tutorial%207%20%28A%2C%20B%2C%20C%29%20v.1.pdf
+- https://www.mahirkoding.com/tutorial-react-perbedaan-state-dan-props/
+- https://medium.com/coderupa/react-prop-state-apa-bedanya-7ee61df8257f
+- https://www.techfor.id/pengertian-component-dan-props-pada-react-js/
+- https://www.geeksforgeeks.org/differences-between-functional-components-and-class-components-in-react/
+- https://stackoverflow.com/questions/30971395/difference-between-react-component-and-react-element
+
 ## Tutorial 6
 
 ### What I have learned today
