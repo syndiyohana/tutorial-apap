@@ -6,6 +6,60 @@
 
 ---
 
+## Tutorial 8
+
+### What I have learned today
+
+Pada tutorial ini, saya mempelajari mengenai ReactJS yang fokus kepada frontend dan backend nya. Saya mempelajari bagaimana cara menghubungkan endpoint ke backend untuk mengelola data pada database sehingga dapat diretrieve ke bagian frontend.
+
+#### Pertanyaan 1: Ceritakan langkah - langkah yang kalian lakukan untuk solve LATIHAN no.1, dan mengapa kalian melakukan langkah - langkah tersebut?
+
+Selama pengerjaan tutorial, saya hanya mengikuti langkah-langkah yang disajikan saja. Setelah melihat hasilnya dengan mengisi form add item dan mensubmit nya, lalu menekan button add item lagi, form tetap kosong dan tidak berisi input value dari sebelumnya. Untuk itu, saya tidak melakukan langkah-langkah untuk melakukan solve lagi. Hanya saja, hal itu bisa tersolve karena pada saat submit form, pada function handleSubmit, setelah input diolah, maka variabel id, title, price, dll diset lagi menjadi kosong, sehingga ketika ditekan button add item lagi, nilai dari formnya sudah kosong.
+
+#### Pertanyaan 2: Jelaskan fungsi dari async dan await!
+
+Async merupakan fungsi yang digunakan oleh fungsi yang bersifat asynchronus agar terlihat seperti fungsi synchronus. Fungsi async biasanya digunakan ketika kita ingin melakukan parse data melalui api ataupun database dari repository lain. Sementara await digunakan di dalam fungsi async, berguna untuk meyakinkan bahwa data terlebih dahulu telah diambi;/diparse lalu menjalankan method selanjutnya. Await biasanya digunakan untuk menembak end point data sehingga data berhasil diubah, diambil, ataupun dipost.
+
+#### Pertanyaan 3: Masukkan jawaban dari Screenshot yang diperintahkan di halaman 9 pada Component Lifecycle pada pertanyaan ini.
+
+- Step 1 : Menambah iem pada List Item
+  ![alt text](https://user-images.githubusercontent.com/71598534/144442374-7b4d33b9-7fab-41ce-9736-54c109b7746b.png)
+  ![alt text](https://user-images.githubusercontent.com/71598534/144442546-7ea5e541-f4bb-423e-bf6e-0281b8599a15.png)
+- Step 2 :Menjalankan npm start
+  ![alt text](https://user-images.githubusercontent.com/71598534/144443335-0c7b9794-7a4c-4b4d-b050-ae8149dd2b03.png)
+- Step 3 : Buka browser dan inspect element
+  ![alt text](https://user-images.githubusercontent.com/71598534/144444142-fc7f6b68-3ca8-4729-8715-6baeb4e4a227.png)
+- Step 4 : Menambahkan isLoading pada state pada komponen ItemList
+  ![alt text](https://user-images.githubusercontent.com/71598534/144444279-e9c4cf10-3459-43a0-a438-5077c0dafc1e.png)
+- Step 5 : Menambahkan sebuah handler dan button untuk mengubah isLoading yang ada pada state
+  ![alt text](https://user-images.githubusercontent.com/71598534/144444427-b41334de-ad61-4d52-9fbb-f9f57d044e97.png)
+  ![alt text](https://user-images.githubusercontent.com/71598534/144444479-18610bef-ba17-4af3-8cbf-d229c7da7ca9.png)
+- Step 6 : Buka Browser
+  ![alt text](https://user-images.githubusercontent.com/71598534/144444531-16d03e39-6dcd-45db-b297-b96796dd38a9.png)
+- Step 7 : Inspect tombol change state
+  ![alt text](https://user-images.githubusercontent.com/71598534/144444608-b405656c-7fa6-491b-a4b7-274b5be86062.png)
+
+#### Pertanyaan 4: Jelaskan fungsi dari componentDidMount, shouldComponentUpdate, componentDidUpdate, componentWillReceiveProps, componentWillUnmount. Notes : Penjelasan harus mencantumkan “kapan fungsi dipanggil” dan “use case apa saja yang biasanya menggunakan lifecycle method tersebut”.
+
+ComponentDidMount merupakan fungsi yang dipanggil ketika render dijalankan. ComponenDidMMount biasanya digunakan pada use case data fetch, dimana pada tutorial ketika kita ingin meload data item. shouldComponentUpdate merupakan fungsi yang dipanggil setelah component's props atau state berubah. shouldComponentUpdate biasnaya digunakan ketika kita ingin mangatur kapan merender ulang akibat perubahan state props. componentDidUpdate merupakan fungsi yang dijalankan ketika komponen props maupun state selesai diupdate. componentDidUpdate biasanya digunakan ketika fungsi shouldComponentUpdate dinisiasi/dipanggil. componentWillReceiveProps merupakan fungsi yang dijalankan ketika terdapat perubahan pada state components dengan nilai props yang baru untuk menerima nilai props yang baru. componentWillReceiveProps biasanya digunakan ketika ingin mmelakukan perubahan pada props. componentWillUnmount merupakan fungsi yang dijalankan sebelum sebuah props dihapus. componentWillUnmount biasanya digunakan ketika ingin menghapus sebuah props.
+
+#### What I did not understand
+
+Selama pengerjaan tutorial, saya masih agak bingung denagn proses endpoint data dari frontend ke backend atau sebaliknya.
+
+- [ ] Proses endpoint data
+- [x] Proses Maven
+- [x] Dependency Injection
+- [x] Proses Autowired
+- [x] Penggunaan anotasi-anotasi
+- [x] Penggunaan thymeleaf dan controller untuk handling form
+- [x] Implementasi atribut WebClient
+
+#### Source
+
+- https://medium.com/@matt.readout/using-javascripts-async-await-syntax-to-fetch-data-in-a-react-app-878b930cdc6f
+- https://medium.com/codeacademia/apa-itu-component-lifecycle-di-react-bfcb64f64e0e
+
 ## Tutorial 7
 
 ### What I have learned today
